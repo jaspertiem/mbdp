@@ -51,10 +51,10 @@ body {font-family: Arial;}
 <div style="font-size:16pt; margin: 0 auto; width: 100px; shadow-text: 1px 1px #ee0000">Dashboard</div>
 
 <div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'Wind speed')" id="defaultOpen">Wind speed</button>
-  <button class="tablinks" onclick="openCity(event, 'Wind dir.')">Wind dir.</button>
-  <button class="tablinks" onclick="openCity(event, 'Waves')">Waves</button>
-  <button class="tablinks" onclick="openCity(event, 'Temperature')">Temperature</button>
+  <button class="tablinks" onclick="changeTab(event, 'Wind speed')" id="defaultOpen">Wind speed</button>
+  <button class="tablinks" onclick="changeTab(event, 'Wind dir')">Wind dir</button>
+  <button class="tablinks" onclick="changeTab(event, 'Waves')">Waves</button>
+  <button class="tablinks" onclick="changeTab(event, 'Temperature')">Temperature</button>
 </div>
 
 <div id="Wind speed" class="tabcontent">
@@ -85,8 +85,8 @@ body {font-family: Arial;}
     <th>-</th>
   </tr>
   <tr>
-    <th>AP1, past 12 hrs</th>
-    <th>DPPA, past 12 hrs</th>
+    <th>AP1, past 6 hrs</th>
+    <th>DPPA, past 6 hrs</th>
   </tr>
   <tr>
     <th><img src="http://www.mmweather.net/data/archive-plot?siteids=1047&paramids=14,15&period=21600&linestyle=3" alt="NMWeather AP1 6-hour plot" width="768" height="576"></th>
@@ -97,8 +97,8 @@ body {font-family: Arial;}
     <th>-</th>
   </tr>
   <tr>
-    <th>AP1, past 12 hrs</th>
-    <th>DPPA, past 12 hrs</th>
+    <th>AP1, past 3 hrs</th>
+    <th>DPPA, past 3 hrs</th>
   </tr>
   <tr>
     <th><img src="http://www.mmweather.net/data/archive-plot?siteids=1047&paramids=14,15&period=10800&linestyle=3" alt="NMWeather AP1 3-hour plot" width="768" height="576"></th>
@@ -107,8 +107,8 @@ body {font-family: Arial;}
 </table>
 </div>
 
-<div id="Wind dir." class="tabcontent">
-  <h3>Wind dir.</h3>
+<div id="Wind dir" class="tabcontent">
+  <h3>Wind dir</h3>
  <table style="width:100%">
   <tr>
     <th>AP1, past 24 hrs</th>
@@ -135,8 +135,8 @@ body {font-family: Arial;}
     <th>-</th>
   </tr>
   <tr>
-    <th>AP1, past 12 hrs</th>
-    <th>DPPA, past 12 hrs</th>
+    <th>AP1, past 6 hrs</th>
+    <th>DPPA, past 6 hrs</th>
   </tr>
   <tr>
     <th><img src="http://www.mmweather.net/data/archive-plot?siteids=1047&paramids=13&period=21600&linestyle=3" alt="NMWeather AP1 6-hour plot" width="768" height="576"></th>
@@ -147,8 +147,8 @@ body {font-family: Arial;}
     <th>-</th>
   </tr>
   <tr>
-    <th>AP1, past 12 hrs</th>
-    <th>DPPA, past 12 hrs</th>
+    <th>AP1, past 3 hrs</th>
+    <th>DPPA, past 3 hrs</th>
   </tr>
   <tr>
     <th><img src="http://www.mmweather.net/data/archive-plot?siteids=1047&paramids=13&period=10800&linestyle=3" alt="NMWeather AP1 3-hour plot" width="768" height="576"></th>
@@ -185,8 +185,8 @@ body {font-family: Arial;}
     <th>-</th>
   </tr>
   <tr>
-    <th>AP1, past 12 hrs</th>
-    <th>DPPA, past 12 hrs</th>
+    <th>AP1, past 6 hrs</th>
+    <th>DPPA, past 6 hrs</th>
   </tr>
   <tr>
     <th><img src="http://www.mmweather.net/data/archive-plot?siteids=1047&paramids=135&period=21600&linestyle=3" alt="NMWeather AP1 6-hour plot" width="768" height="576"></th>
@@ -197,8 +197,8 @@ body {font-family: Arial;}
     <th>-</th>
   </tr>
   <tr>
-    <th>AP1, past 12 hrs</th>
-    <th>DPPA, past 12 hrs</th>
+    <th>AP1, past 3 hrs</th>
+    <th>DPPA, past 3 hrs</th>
   </tr>
   <tr>
     <th><img src="http://www.mmweather.net/data/archive-plot?siteids=1047&paramids=135&period=10800&linestyle=3" alt="NMWeather AP1 3-hour plot" width="768" height="576"></th>
@@ -235,8 +235,8 @@ body {font-family: Arial;}
     <th>-</th>
   </tr>
   <tr>
-    <th>AP1, past 12 hrs</th>
-    <th>DPPA, past 12 hrs</th>
+    <th>AP1, past 6 hrs</th>
+    <th>DPPA, past 6 hrs</th>
   </tr>
   <tr>
     <th><img src="http://www.mmweather.net/data/archive-plot?siteids=1047&paramids=61&period=21600&linestyle=3" alt="NMWeather AP1 6-hour plot" width="768" height="576"></th>
@@ -247,8 +247,8 @@ body {font-family: Arial;}
     <th>-</th>
   </tr>
   <tr>
-    <th>AP1, past 12 hrs</th>
-    <th>DPPA, past 12 hrs</th>
+    <th>AP1, past 3 hrs</th>
+    <th>DPPA, past 3 hrs</th>
   </tr>
   <tr>
     <th><img src="http://www.mmweather.net/data/archive-plot?siteids=1047&paramids=61&period=10800&linestyle=3" alt="NMWeather AP1 3-hour plot" width="768" height="576"></th>
@@ -258,7 +258,7 @@ body {font-family: Arial;}
 </div>
 
 <script>
-function openCity(evt, cityName) {
+function changeTab(evt, tabName) {
   var i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");
   for (i = 0; i < tabcontent.length; i++) {
