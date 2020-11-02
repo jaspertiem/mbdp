@@ -45,6 +45,18 @@ body {font-family: Arial;}
 </style>
 </head>
 <body>
+<script>  
+  function tryAgain(e) 
+  {
+    setTimeout(reloadImg, 1000, e);
+  }
+
+  function reloadImg(e)
+  {
+    var source = e.src;
+    e.src = source;
+  }
+</script>
 
 <div style="font-size:16pt; float: left">MMWeather plots</div>
 <div style="font-size:16pt; float: right">Location AP1</div>
@@ -65,8 +77,8 @@ body {font-family: Arial;}
     <th>DPPA, past 24 hrs</th>
   </tr>
   <tr>
-    <th><img src="http://www.mmweather.net/data/archive-plot?siteids=1047&paramids=14,15&period=86400&linestyle=3" alt="NMWeather AP1 24-hour plot" width="768" height="576"></th>
-    <th><img src="http://www.mmweather.net/data/archive-plot?siteids=1048&paramids=14,15&period=86400&linestyle=3" alt="NMWeather DPPA 24-hour plot" width="768" height="576"></th>
+    <th><img class="NO-CACHE" src="http://www.mmweather.net/data/archive-plot?siteids=1047&paramids=14,15&period=86400&linestyle=3&time=0" alt="NMWeather AP1 24-hour plot" width="768" height="576" onerror="reloadImg(this)"></th>
+    <th><img class="NO-CACHE" src="http://www.mmweather.net/data/archive-plot?siteids=1048&paramids=14,15&period=86400&linestyle=3&time=0" alt="NMWeather DPPA 24-hour plot" width="768" height="576" onerror="reloadImg(this)"></th>
   </tr>
   <tr>
     <th>-</th>
@@ -77,8 +89,8 @@ body {font-family: Arial;}
     <th>DPPA, past 12 hrs</th>
   </tr>
   <tr>
-    <th><img src="http://www.mmweather.net/data/archive-plot?siteids=1047&paramids=14,15&period=43200&linestyle=3" alt="NMWeather AP1 12-hour plot" width="768" height="576"></th>
-    <th><img src="http://www.mmweather.net/data/archive-plot?siteids=1048&paramids=14,15&period=43200&linestyle=3" alt="NMWeather DPPA 12-hour plot" width="768" height="576"></th>
+    <th><img class="NO-CACHE" src="http://www.mmweather.net/data/archive-plot?siteids=1047&paramids=14,15&period=43200&linestyle=3&time=0" alt="NMWeather AP1 12-hour plot" width="768" height="576" onerror="reloadImg(this)"></th>
+    <th><img class="NO-CACHE" src="http://www.mmweather.net/data/archive-plot?siteids=1048&paramids=14,15&period=43200&linestyle=3&time=0" alt="NMWeather DPPA 12-hour plot" width="768" height="576" onerror="reloadImg(this)"></th>
   </tr>
   <tr>
     <th>-</th>
@@ -89,8 +101,8 @@ body {font-family: Arial;}
     <th>DPPA, past 6 hrs</th>
   </tr>
   <tr>
-    <th><img src="http://www.mmweather.net/data/archive-plot?siteids=1047&paramids=14,15&period=21600&linestyle=3" alt="NMWeather AP1 6-hour plot" width="768" height="576"></th>
-    <th><img src="http://www.mmweather.net/data/archive-plot?siteids=1048&paramids=14,15&period=21600&linestyle=3" alt="NMWeather DPPA 6-hour plot" width="768" height="576"></th>
+    <th><img class="NO-CACHE" src="http://www.mmweather.net/data/archive-plot?siteids=1047&paramids=14,15&period=21600&linestyle=3&time=0" alt="NMWeather AP1 6-hour plot" width="768" height="576" onerror="reloadImg(this)"></th>
+    <th><img class="NO-CACHE" src="http://www.mmweather.net/data/archive-plot?siteids=1048&paramids=14,15&period=21600&linestyle=3&time=0" alt="NMWeather DPPA 6-hour plot" width="768" height="576" onerror="reloadImg(this)"></th>
   </tr>
   <tr>
     <th>-</th>
@@ -101,8 +113,8 @@ body {font-family: Arial;}
     <th>DPPA, past 3 hrs</th>
   </tr>
   <tr>
-    <th><img src="http://www.mmweather.net/data/archive-plot?siteids=1047&paramids=14,15&period=10800&linestyle=3" alt="NMWeather AP1 3-hour plot" width="768" height="576"></th>
-    <th><img src="http://www.mmweather.net/data/archive-plot?siteids=1048&paramids=14,15&period=10800&linestyle=3" alt="NMWeather DPPA 3-hour plot" width="768" height="576"></th>
+    <th><img class="NO-CACHE" src="http://www.mmweather.net/data/archive-plot?siteids=1047&paramids=14,15&period=10800&linestyle=3&time=0" alt="NMWeather AP1 3-hour plot" width="768" height="576" onerror="reloadImg(this)"></th>
+    <th><img class="NO-CACHE" src="http://www.mmweather.net/data/archive-plot?siteids=1048&paramids=14,15&period=10800&linestyle=3&time=0" alt="NMWeather DPPA 3-hour plot" width="768" height="576" onerror="reloadImg(this)"></th>
   </tr>
 </table>
 </div>
@@ -115,8 +127,8 @@ body {font-family: Arial;}
     <th>DPPA, past 24 hrs</th>
   </tr>
   <tr>
-    <th><img src="http://www.mmweather.net/data/archive-plot?siteids=1047&paramids=13&period=86400&linestyle=3" alt="NMWeather AP1 24-hour plot" width="768" height="576"></th>
-    <th><img src="http://www.mmweather.net/data/archive-plot?siteids=1048&paramids=13&period=86400&linestyle=3" alt="NMWeather DPPA 24-hour plot" width="768" height="576"></th>
+    <th><img class="NO-CACHE" src="http://www.mmweather.net/data/archive-plot?siteids=1047&paramids=13&period=86400&linestyle=3&time=0" alt="NMWeather AP1 24-hour plot" width="768" height="576" onerror="reloadImg(this)"></th>
+    <th><img class="NO-CACHE" src="http://www.mmweather.net/data/archive-plot?siteids=1048&paramids=13&period=86400&linestyle=3&time=0" alt="NMWeather DPPA 24-hour plot" width="768" height="576" onerror="reloadImg(this)"></th>
   </tr>
   <tr>
     <th>-</th>
@@ -127,8 +139,8 @@ body {font-family: Arial;}
     <th>DPPA, past 12 hrs</th>
   </tr>
   <tr>
-    <th><img src="http://www.mmweather.net/data/archive-plot?siteids=1047&paramids=13&period=43200&linestyle=3" alt="NMWeather AP1 12-hour plot" width="768" height="576"></th>
-    <th><img src="http://www.mmweather.net/data/archive-plot?siteids=1048&paramids=13&period=43200&linestyle=3" alt="NMWeather DPPA 12-hour plot" width="768" height="576"></th>
+    <th><img class="NO-CACHE" src="http://www.mmweather.net/data/archive-plot?siteids=1047&paramids=13&period=43200&linestyle=3&time=0" alt="NMWeather AP1 12-hour plot" width="768" height="576" onerror="reloadImg(this)"></th>
+    <th><img class="NO-CACHE" src="http://www.mmweather.net/data/archive-plot?siteids=1048&paramids=13&period=43200&linestyle=3&time=0" alt="NMWeather DPPA 12-hour plot" width="768" height="576" onerror="reloadImg(this)"></th>
   </tr>
   <tr>
     <th>-</th>
@@ -139,8 +151,8 @@ body {font-family: Arial;}
     <th>DPPA, past 6 hrs</th>
   </tr>
   <tr>
-    <th><img src="http://www.mmweather.net/data/archive-plot?siteids=1047&paramids=13&period=21600&linestyle=3" alt="NMWeather AP1 6-hour plot" width="768" height="576"></th>
-    <th><img src="http://www.mmweather.net/data/archive-plot?siteids=1048&paramids=13&period=21600&linestyle=3" alt="NMWeather DPPA 6-hour plot" width="768" height="576"></th>
+    <th><img class="NO-CACHE" src="http://www.mmweather.net/data/archive-plot?siteids=1047&paramids=13&period=21600&linestyle=3&time=0" alt="NMWeather AP1 6-hour plot" width="768" height="576" onerror="reloadImg(this)"></th>
+    <th><img class="NO-CACHE" src="http://www.mmweather.net/data/archive-plot?siteids=1048&paramids=13&period=21600&linestyle=3&time=0" alt="NMWeather DPPA 6-hour plot" width="768" height="576" onerror="reloadImg(this)"></th>
   </tr>
   <tr>
     <th>-</th>
@@ -151,8 +163,8 @@ body {font-family: Arial;}
     <th>DPPA, past 3 hrs</th>
   </tr>
   <tr>
-    <th><img src="http://www.mmweather.net/data/archive-plot?siteids=1047&paramids=13&period=10800&linestyle=3" alt="NMWeather AP1 3-hour plot" width="768" height="576"></th>
-    <th><img src="http://www.mmweather.net/data/archive-plot?siteids=1048&paramids=13&period=10800&linestyle=3" alt="NMWeather DPPA 3-hour plot" width="768" height="576"></th>
+    <th><img class="NO-CACHE" src="http://www.mmweather.net/data/archive-plot?siteids=1047&paramids=13&period=10800&linestyle=3&time=0" alt="NMWeather AP1 3-hour plot" width="768" height="576" onerror="reloadImg(this)"></th>
+    <th><img class="NO-CACHE" src="http://www.mmweather.net/data/archive-plot?siteids=1048&paramids=13&period=10800&linestyle=3&time=0" alt="NMWeather DPPA 3-hour plot" width="768" height="576" onerror="reloadImg(this)"></th>
   </tr>
 </table>
 </div>
@@ -165,8 +177,8 @@ body {font-family: Arial;}
     <th>DPPA, past 24 hrs</th>
   </tr>
   <tr>
-    <th><img src="http://www.mmweather.net/data/archive-plot?siteids=1047&paramids=135&period=86400&linestyle=3" alt="NMWeather AP1 24-hour plot" width="768" height="576"></th>
-    <th><img src="http://www.mmweather.net/data/archive-plot?siteids=1048&paramids=135&period=86400&linestyle=3" alt="NMWeather DPPA 24-hour plot" width="768" height="576"></th>
+    <th><img class="NO-CACHE" src="http://www.mmweather.net/data/archive-plot?siteids=1047&paramids=135&period=86400&linestyle=3&time=0" alt="NMWeather AP1 24-hour plot" width="768" height="576" onerror="reloadImg(this)"></th>
+    <th><img class="NO-CACHE" src="http://www.mmweather.net/data/archive-plot?siteids=1048&paramids=135&period=86400&linestyle=3&time=0" alt="NMWeather DPPA 24-hour plot" width="768" height="576" onerror="reloadImg(this)"></th>
   </tr>
   <tr>
     <th>-</th>
@@ -177,8 +189,8 @@ body {font-family: Arial;}
     <th>DPPA, past 12 hrs</th>
   </tr>
   <tr>
-    <th><img src="http://www.mmweather.net/data/archive-plot?siteids=1047&paramids=135&period=43200&linestyle=3" alt="NMWeather AP1 12-hour plot" width="768" height="576"></th>
-    <th><img src="http://www.mmweather.net/data/archive-plot?siteids=1048&paramids=135&period=43200&linestyle=3" alt="NMWeather DPPA 12-hour plot" width="768" height="576"></th>
+    <th><img class="NO-CACHE" src="http://www.mmweather.net/data/archive-plot?siteids=1047&paramids=135&period=43200&linestyle=3&time=0" alt="NMWeather AP1 12-hour plot" width="768" height="576" onerror="reloadImg(this)"></th>
+    <th><img class="NO-CACHE" src="http://www.mmweather.net/data/archive-plot?siteids=1048&paramids=135&period=43200&linestyle=3&time=0" alt="NMWeather DPPA 12-hour plot" width="768" height="576" onerror="reloadImg(this)"></th>
   </tr>
   <tr>
     <th>-</th>
@@ -189,8 +201,8 @@ body {font-family: Arial;}
     <th>DPPA, past 6 hrs</th>
   </tr>
   <tr>
-    <th><img src="http://www.mmweather.net/data/archive-plot?siteids=1047&paramids=135&period=21600&linestyle=3" alt="NMWeather AP1 6-hour plot" width="768" height="576"></th>
-    <th><img src="http://www.mmweather.net/data/archive-plot?siteids=1048&paramids=135&period=21600&linestyle=3" alt="NMWeather DPPA 6-hour plot" width="768" height="576"></th>
+    <th><img class="NO-CACHE" src="http://www.mmweather.net/data/archive-plot?siteids=1047&paramids=135&period=21600&linestyle=3&time=0" alt="NMWeather AP1 6-hour plot" width="768" height="576" onerror="reloadImg(this)"></th>
+    <th><img class="NO-CACHE" src="http://www.mmweather.net/data/archive-plot?siteids=1048&paramids=135&period=21600&linestyle=3&time=0" alt="NMWeather DPPA 6-hour plot" width="768" height="576" onerror="reloadImg(this)"></th>
   </tr>
   <tr>
     <th>-</th>
@@ -201,8 +213,8 @@ body {font-family: Arial;}
     <th>DPPA, past 3 hrs</th>
   </tr>
   <tr>
-    <th><img src="http://www.mmweather.net/data/archive-plot?siteids=1047&paramids=135&period=10800&linestyle=3" alt="NMWeather AP1 3-hour plot" width="768" height="576"></th>
-    <th><img src="http://www.mmweather.net/data/archive-plot?siteids=1048&paramids=135&period=10800&linestyle=3" alt="NMWeather DPPA 3-hour plot" width="768" height="576"></th>
+    <th><img class="NO-CACHE" src="http://www.mmweather.net/data/archive-plot?siteids=1047&paramids=135&period=10800&linestyle=3&time=0" alt="NMWeather AP1 3-hour plot" width="768" height="576" onerror="reloadImg(this)"></th>
+    <th><img class="NO-CACHE" src="http://www.mmweather.net/data/archive-plot?siteids=1048&paramids=135&period=10800&linestyle=3&time=0" alt="NMWeather DPPA 3-hour plot" width="768" height="576" onerror="reloadImg(this)"></th>
   </tr>
 </table>
 </div>
@@ -215,8 +227,8 @@ body {font-family: Arial;}
     <th>DPPA, past 24 hrs</th>
   </tr>
   <tr>
-    <th><img src="http://www.mmweather.net/data/archive-plot?siteids=1047&paramids=61&period=86400&linestyle=3" alt="NMWeather AP1 24-hour plot" width="768" height="576"></th>
-    <th><img src="http://www.mmweather.net/data/archive-plot?siteids=1048&paramids=61&period=86400&linestyle=3" alt="NMWeather DPPA 24-hour plot" width="768" height="576"></th>
+    <th><img class="NO-CACHE" src="http://www.mmweather.net/data/archive-plot?siteids=1047&paramids=61&period=86400&linestyle=3&time=0" alt="NMWeather AP1 24-hour plot" width="768" height="576" onerror="reloadImg(this)"></th>
+    <th><img class="NO-CACHE" src="http://www.mmweather.net/data/archive-plot?siteids=1048&paramids=61&period=86400&linestyle=3&time=0" alt="NMWeather DPPA 24-hour plot" width="768" height="576" onerror="reloadImg(this)"></th>
   </tr>
   <tr>
     <th>-</th>
@@ -227,8 +239,8 @@ body {font-family: Arial;}
     <th>DPPA, past 12 hrs</th>
   </tr>
   <tr>
-    <th><img src="http://www.mmweather.net/data/archive-plot?siteids=1047&paramids=61&period=43200&linestyle=3" alt="NMWeather AP1 12-hour plot" width="768" height="576"></th>
-    <th><img src="http://www.mmweather.net/data/archive-plot?siteids=1048&paramids=61&period=43200&linestyle=3" alt="NMWeather DPPA 12-hour plot" width="768" height="576"></th>
+    <th><img class="NO-CACHE" src="http://www.mmweather.net/data/archive-plot?siteids=1047&paramids=61&period=43200&linestyle=3&time=0" alt="NMWeather AP1 12-hour plot" width="768" height="576" onerror="reloadImg(this)"></th>
+    <th><img class="NO-CACHE" src="http://www.mmweather.net/data/archive-plot?siteids=1048&paramids=61&period=43200&linestyle=3&time=0" alt="NMWeather DPPA 12-hour plot" width="768" height="576" onerror="reloadImg(this)"></th>
   </tr>
   <tr>
     <th>-</th>
@@ -239,8 +251,8 @@ body {font-family: Arial;}
     <th>DPPA, past 6 hrs</th>
   </tr>
   <tr>
-    <th><img src="http://www.mmweather.net/data/archive-plot?siteids=1047&paramids=61&period=21600&linestyle=3" alt="NMWeather AP1 6-hour plot" width="768" height="576"></th>
-    <th><img src="http://www.mmweather.net/data/archive-plot?siteids=1048&paramids=61&period=21600&linestyle=3" alt="NMWeather DPPA 6-hour plot" width="768" height="576"></th>
+    <th><img class="NO-CACHE" src="http://www.mmweather.net/data/archive-plot?siteids=1047&paramids=61&period=21600&linestyle=3&time=0" alt="NMWeather AP1 6-hour plot" width="768" height="576" onerror="reloadImg(this)"></th>
+    <th><img class="NO-CACHE" src="http://www.mmweather.net/data/archive-plot?siteids=1048&paramids=61&period=21600&linestyle=3&time=0" alt="NMWeather DPPA 6-hour plot" width="768" height="576" onerror="reloadImg(this)"></th>
   </tr>
   <tr>
     <th>-</th>
@@ -251,8 +263,8 @@ body {font-family: Arial;}
     <th>DPPA, past 3 hrs</th>
   </tr>
   <tr>
-    <th><img src="http://www.mmweather.net/data/archive-plot?siteids=1047&paramids=61&period=10800&linestyle=3" alt="NMWeather AP1 3-hour plot" width="768" height="576"></th>
-    <th><img src="http://www.mmweather.net/data/archive-plot?siteids=1048&paramids=61&period=10800&linestyle=3" alt="NMWeather DPPA 3-hour plot" width="768" height="576"></th>
+    <th><img class="NO-CACHE" src="http://www.mmweather.net/data/archive-plot?siteids=1047&paramids=61&period=10800&linestyle=3&time=0" alt="NMWeather AP1 3-hour plot" width="768" height="576" onerror="reloadImg(this)"></th>
+    <th><img class="NO-CACHE" src="http://www.mmweather.net/data/archive-plot?siteids=1048&paramids=61&period=10800&linestyle=3&time=0" alt="NMWeather DPPA 3-hour plot" width="768" height="576" onerror="reloadImg(this)"></th>
   </tr>
 </table>
 </div>
@@ -274,7 +286,26 @@ function changeTab(evt, tabName) {
 
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
+
+setInterval(function() {
+      var images = document.images;
+      for (var i=0; i<images.length; i++) {
+          images[i].src = images[i].src.replace(/\btime=[^&]*/, 'time=' + new Date().getTime());
+      }
+  }, 300000); // 10000 milliseconds = 10 seconds
+
+
+function reloadImg(e) 
+  {
+    setTimeout(reloadImgSrc, 200, e);
+  }
+
+function reloadImgSrc(e)
+  {
+    var source = e.src;
+    e.src = source;
+  }
 </script>
    
 </body>
-</html> 
+</html>
