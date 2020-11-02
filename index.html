@@ -59,7 +59,8 @@ body {font-family: Arial;}
 </script>
 
 <div style="font-size:16pt; float: left">MMWeather plots</div>
-<div style="font-size:16pt; float: right">Location AP1</div>
+<div id="lastRefreshSeconds" style="font-size:10pt; float: right"> now</div>
+<div id="lastRefresh" style="font-size:10pt; float: right">Last refresh: &nbsp; </div>
 <div style="font-size:16pt; margin: 0 auto; width: 100px; shadow-text: 1px 1px #ee0000">Dashboard</div>
 
 <div class="tab">
@@ -287,13 +288,50 @@ function changeTab(evt, tabName) {
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
 
+var refreshDate = new Date().getTime();
+
 setInterval(function() {
       var images = document.images;
+      var now = new Date().getTime();
       for (var i=0; i<images.length; i++) {
-          images[i].src = images[i].src.replace(/\btime=[^&]*/, 'time=' + new Date().getTime());
+          images[i].src = images[i].src.replace(/\btime=[^&]*/, 'time=' + now);
       }
-  }, 300000); // 10000 milliseconds = 10 seconds
+      refreshDate = now
+      document.getElementById("lastRefresh").innerHTML = "Last refresh:" + refreshDate.toLocaleTimeString();
+  }, 60000); // 10000 milliseconds = 10 seconds
 
+setInterval(function() {
+      var now = new Date().getTime();
+      
+      // Find the distance between now and the count down date
+      var distance = now - refreshDate;
+
+      // Time calculations for days, hours, minutes and seconds
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      // Display the result in the element with id="demo"
+      if (days > 0) {
+          var timestr = days + "d " + hours + "h " + minutes + "m " + seconds + "s ago";
+      } else {
+          if (hours > 0) {
+              var timestr = hours + "h " + minutes + "m " + seconds + "s ago";
+          } else {
+              if (minutes > 0) {
+                  var timestr = minutes + "m " + seconds + "s ago";
+              } else {
+                  if (seconds > 0) {
+                      var timestr = seconds + "s ago";
+                  } else {
+                      var timestr = "now";
+                  };
+              };
+          };
+      };
+      document.getElementById("lastRefreshSeconds").innerHTML = timestr;
+  }, 1000); // 1000 milliseconds = 1 second
 
 function reloadImg(e) 
   {
@@ -308,4 +346,4 @@ function reloadImgSrc(e)
 </script>
    
 </body>
-</html>
+</html> 
